@@ -6,11 +6,15 @@
     */
 
     //ENTRADA
-
-
+    let numero = Number(prompt(`escreva um número de 1 a 10 `));
     //PROCESSAMENTO
+    while (numero < 0 || numero > 10) {
+        alert(`O número ${numero} é inválido!`)
+        numero = Number(prompt(`escreva um número de 1 a 10 `));
+    }
 
 
     //SAÍDA
+    alert(`Número ${numero} válido`);
 
 </script>

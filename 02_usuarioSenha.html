@@ -6,11 +6,14 @@
     */
 
     //ENTRADA
-
-
+    let userName = prompt(`Ensira o nome do seu usúario:`);
+    let senha = prompt(`Ensira a senha do seu usúario:`)
     //PROCESSAMENTO
-
-
+    while (senha == userName) {
+        alert(`Senha invalida`);
+        senha = prompt(`Ensira a senha do seu usúario:`)
+    }
     //SAÍDA
+    alert(`Usúario ${userName} criado com sucesso`)
 
 </script>
