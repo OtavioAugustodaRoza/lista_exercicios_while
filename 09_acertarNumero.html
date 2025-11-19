@@ -5,11 +5,21 @@
     */
 
     //ENTRADA
-
-
+    const numeroAleatorio = Math.floor(Math.random() * 30) + 1;
+    let tentativa = Number(prompt(`Tente adivinhar o número entre 1 e 30:`));
+    let tentativas = 1;
     //PROCESSAMENTO
+    while (tentativa !== numeroAleatorio) {
+        if (tentativa < numeroAleatorio) {
+            tentativa = Number(prompt(`Maior! Tente novamente:`));
+        } else if (tentativa > numeroAleatorio) {
+            tentativa = Number(prompt(`Menor! Tente novamente:`));
+        }
+        tentativas++;
+    }
 
 
     //SAÍDA
+    document.write(`Parabéns! Você acertou o número ${numeroAleatorio} em ${tentativas} tentativas.`);
     
 </script>

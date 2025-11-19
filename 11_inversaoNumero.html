@@ -8,11 +8,14 @@
     */
 
     //ENTRADA
-
-
+    let numero = prompt(`Digite um número para inverter sua ordem:`);
+    let numeroInvertido = '';
     //PROCESSAMENTO
-
-
+    let i = numero.length - 1;
+    while (i >= 0) {
+        numeroInvertido += numero[i];
+        i--;
+    }
     //SAÍDA
-
+    document.write(`O número invertido é: ${numeroInvertido}`);
 </script>

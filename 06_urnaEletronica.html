@@ -22,7 +22,10 @@
   //ENTRADA
   let quandidadeV = Number(prompt(`quantas pessoas vão votar?`))
   while(quandidadeV <= 0){
-    quandidadeV = Number(prompt(`quantidade inválida! por favor digite uma quantidade númerica maior que 0?`));
+    quandidadeV = Number(prompt(`quantidade inválida! por favor digite uma quantidade númerica maior que 0!`));
+  }
+  while (isNaN(quandidadeV)) {
+    quandidadeV = Number(prompt(`quantidade inválida! por favor digite uma quantidade númerica !`));
   }
   let branco = 0
   let nulo = 0
