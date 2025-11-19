@@ -53,11 +53,11 @@
   const candidatoVencedor =
     cM > cJ
       ? `A candidata Mariazinha ganhou a eleição com ${
-          (cM / quandidadeV) * 100
+         ( (cM / quandidadeV) * 100).toFixed(2)
         }% dos votos`
-      : `O candidato Joãozinho ganhou a eleição com ${
-          (cJ / quandidadeV) * 100
-        }% dos votos`
+      : (cJ > cM) ? `O candidato Joãozinho ganhou a eleição com ${
+        (  (cJ / quandidadeV) * 100).toFixed(2)
+        }% dos votos`: `Os votos dos candidatos ficaram empatados!`
 
   document.write(
     `Candidatos: <br> Joãozinho: ${cJ} <br> Mariazinha: ${cM} <br> <br> Votos nulos: ${nulo} <br> Votos branco: ${branco} <br> <br> ${candidatoVencedor}`
