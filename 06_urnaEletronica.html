@@ -1,6 +1,6 @@
-<meta charset="UTF-8">
+<meta charset="UTF-8" />
 <script>
-    /*
+  /*
     PROBLEMA: URNA ELETRÔNICA
     Faça um programa que simule a urna eletrônica.
     A tela a ser apresentada deverá ser da seguinte forma:
@@ -19,12 +19,47 @@
     d) O candidato vencedor.
     */
 
-    //ENTRADA
+  //ENTRADA
+  let quandidadeV = Number(prompt(`quantas pessoas vão votar?`))
+  while(quandidadeV <= 0){
+    quandidadeV = Number(prompt(`quantidade inválida! por favor digite uma quantidade númerica maior que 0?`));
+  }
+  let branco = 0
+  let nulo = 0
+  let cJ = 0
+  let cM = 0
+  //PROCESSAMENTO
+  while (quandidadeV > branco + nulo + cJ + cM) {
+    let voto = Number(
+      prompt(
+        ` 1. candidato Joãozinho \n 2. Candidato Mariazinha \n 3. Nulo \n 4. Branco`
+      )
+    )
+    if (voto == 1) {
+      cJ++
+    } else if (voto == 2) {
+      cM++
+    } else if (voto == 3) {
+      nulo++
+    } else if (voto == 4) {
+      branco++
+    } else {
+      nulo++
+      alert(`Número de candidato inválido! voto foi considerado como nulo`)
+    }
+  }
+  //SAÍDA
 
+  const candidatoVencedor =
+    cM > cJ
+      ? `A candidata Mariazinha ganhou a eleição com ${
+          (cM / quandidadeV) * 100
+        }% dos votos`
+      : `O candidato Joãozinho ganhou a eleição com ${
+          (cJ / quandidadeV) * 100
+        }% dos votos`
 
-    //PROCESSAMENTO
-
-
-    //SAÍDA
-
+  document.write(
+    `Candidatos: <br> Joãozinho: ${cJ} <br> Mariazinha: ${cM} <br> <br> Votos nulos: ${nulo} <br> Votos branco: ${branco} <br> <br> ${candidatoVencedor}`
+  )
 </script>

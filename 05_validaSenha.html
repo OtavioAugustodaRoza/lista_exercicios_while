@@ -6,11 +6,12 @@
     */
 
     //ENTRADA
-
-
+    const vSenha = 1234;
+    let senha = Number(prompt(`digite sua senha`))
     //PROCESSAMENTO
-
-
+    while(senha !== vSenha){
+        senha = Number(prompt(`Senha incorreta! digite novamente:`));
+    }
     //SAÍDA
-
+    alert(`Senha correta`);
 </script>
